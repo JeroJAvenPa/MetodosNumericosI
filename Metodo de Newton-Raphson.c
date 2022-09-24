@@ -22,17 +22,17 @@ int main(){
 	printf("a: "); scanf("%lf", &a);
 	
 	system("cls");
-	printf("i\ta\tf(a)\t\tp\t\t\tabsoluto\trelativo\n");
+	printf("i\ta\tf(a)\t\tp\t\t\tabsoluto\tporcentual\n");
 	
 	do{
 		p=a-f(a)/fx(a);
 		s2=s1;
 		s1=p;
-		error=fabs((s1-s2)/s1);
+		error=fabs((s1-s2)/s1)*100;
 		printf("%d\t%.3f\t%.10f\t%.17f\t%.6f\t%.10f\n", i+1, a, f(a), p, fabs(s1-s2), error );
 		a=p;
 		i++;
-	}while(error>0.00000005);
+	}while(error>0.0003);
 	
 	return 0;
 }
