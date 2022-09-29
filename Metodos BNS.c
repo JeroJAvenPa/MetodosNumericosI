@@ -44,7 +44,7 @@ int menuFuncion(){
 	
 	printf("\tMenú de funciones\n\
 1.- x^2*cos(x)-2x\n\
-2.- 4/x^2*e^(x+2)/5\n\
+2.- 4/x^2*e^(x+2)/4+1\n\
 3.- x^3-3sen(x^2)+1\n\
 4.- x^3+6x^2+9.4x+2.5\n\
 5.- Salir\n");
@@ -66,7 +66,7 @@ double fx1(double x){
 
 double fx2(double x){
 	
-	return 4*pow(exp(1),x+2)/(pow(x,2)*5);
+	return pow(exp(1),x+2)*(6-2/pow(x,2))/4+1;
 }
 
 double fx3(double x){
@@ -86,7 +86,7 @@ double dx1(double x){
 
 double dx2(double x){
 	
-	return 4*pow(exp(1),x+2)*(x-2)/(5*pow(x,3));
+	return pow(exp(1),x+2)*(3*pow(x,3)-x+2)/(2*pow(x,3));
 }
 
 double dx3(double x){
